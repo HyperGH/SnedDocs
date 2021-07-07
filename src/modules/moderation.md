@@ -35,14 +35,14 @@ Below you will find all the moderation commands, and a brief description of each
 
 | Command  | Description  |
 | ------------ | ------------ |
-| `sn kick <user>`  | Kicks a user from the server.  |
-| `sn softban <user>`  | Bans a user from the server, then immediately unbans them. Useful for cleaning up messages from a user.   |
+| `sn kick <user> [reason]`  | Kicks a user from the server.  |
+| `sn softban <user> [reason]`  | Bans a user from the server, then immediately unbans them. Useful for cleaning up messages from a user.   |
 | `sn tempban <user> <duration>`  | Temporarily bans a user for the specified duration.  |
-| `sn ban <user>`  | Bans a user from the server.  |
-| `sn unban <user>`  | Unbans a user from the server.  |
-| `sn mute <user>`  | Permanently mutes a user.  |
+| `sn ban <user> [reason]`  | Bans a user from the server.  |
+| `sn unban <user> [reason]`  | Unbans a user from the server.  |
+| `sn mute <user> [reason]`  | Permanently mutes a user.  |
 | `sn tempmute <user> <duration>`  | Temporarily mutes a user.  |
-| `sn warn <user>`  | Warns a user, which increases their warn-count. (This can be viewed with `sn whois`)  |
+| `sn warn <user> [reason]`  | Warns a user, which increases their warn-count. (This can be viewed with `sn whois`)  |
 | `sn warn clear <user>`  | Clear warnings for a user.  |
 | `sn clear [count]`  | Clean up the bot's own messages in the channel. Optionally specify a number of messages.  |
 | `sn purge [count] [user]`  | Bulk-delete messages from a channel, optionally specify the number of messages and a user to filter to.  |
