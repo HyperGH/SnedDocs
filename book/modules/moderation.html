@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Moderation - Sned Documentation</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../favicon.svg">
+                        <link rel="shortcut icon" href="../favicon.png">
+                <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+                <link rel="stylesheet" href="../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../home.html">Home</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="../modules/index.html"><strong aria-hidden="true">1.</strong> Modules and the Dashboard</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../modules/moderation.html" class="active"><strong aria-hidden="true">1.1.</strong> Moderation</a></li><li class="chapter-item expanded "><a href="../modules/administration.html"><strong aria-hidden="true">1.2.</strong> Administration</a></li></ol></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">Sned Documentation</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="welcome"><a class="header" href="#welcome">Welcome</a></h1>
+<hr />
+<h2 id="setup-and-configuration"><a class="header" href="#setup-and-configuration">Setup and Configuration</a></h2>
+<p>To start setting up the moderation module, head to the dashboard, and navigate to <strong>Modules &gt; Moderation</strong>. Here, you can configure:</p>
+<ul>
+<li>Which roles have access to moderation commands (these roles are also exempt from any auto-moderation, if set)</li>
+<li>Configure which role will be added to users when they are muted. This role should not have 'Send Messages' permissions</li>
+<li>Decide if users should be DM-d by the bot during punishment procedure, notifying them of it.</li>
+<li>If you want moderation commands to be removed from the chat</li>
+</ul>
+<p><strong>Please note that without a mute role set, muting will not work!</strong></p>
+<hr />
+<h2 id="auto-moderation"><a class="header" href="#auto-moderation">Auto-Moderation</a></h2>
+<p>Sned is equipped with powerful auto-moderation features, which you can access by navigating to <strong>Modules &gt; Moderation &gt; Auto-Moderation</strong>. Here you will be able to decide what action the bot should take in case of certain pre-defined infractions. By default all auto-moderation capabilites are <strong>disabled</strong>.</p>
+<p>You also have the ability to select which roles will be excluded from auto-moderation, although please note that roles with moderation permissions are automatically excluded, along with server administrators and owners.</p>
+<p>One of the unique features of Sned is the &quot;Smart&quot; punishment type, which tries preemptively warning the user, before punishing them. The flow looks something like this:</p>
+<ol>
+<li>User posts problematic content</li>
+<li>Bot removes it and notifies the user</li>
+<li>If the user keeps up the malicious behaviour within a certain timeframe, they will be formally warned, increasing their warning counter.</li>
+<li>If the user still keeps going, then the punishment in the &quot;Smart punishment type&quot; option on the Dashboard will be used against the user.</li>
+</ol>
+<hr />
+<h2 id="commands"><a class="header" href="#commands">Commands</a></h2>
+<p>Below you will find all the moderation commands, and a brief description of each of them. For detailed command usage, you can type <code>sn help &lt;command_name&gt;</code> in any of the channels where the bot is present.</p>
+<table><thead><tr><th>Command</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>sn kick &lt;user&gt;</code></td><td>Kicks a user from the server.</td></tr>
+<tr><td><code>sn softban &lt;user&gt;</code></td><td>Bans a user from the server, then immediately unbans them. Useful for cleaning up messages from a user.</td></tr>
+<tr><td><code>sn tempban &lt;user&gt; &lt;duration&gt;</code></td><td>Temporarily bans a user for the specified duration.</td></tr>
+<tr><td><code>sn ban &lt;user&gt;</code></td><td>Bans a user from the server.</td></tr>
+<tr><td><code>sn unban &lt;user&gt;</code></td><td>Unbans a user from the server.</td></tr>
+<tr><td><code>sn mute &lt;user&gt;</code></td><td>Permanently mutes a user.</td></tr>
+<tr><td><code>sn tempmute &lt;user&gt; &lt;duration&gt;</code></td><td>Temporarily mutes a user.</td></tr>
+<tr><td><code>sn warn &lt;user&gt;</code></td><td>Warns a user, which increases their warn-count. (This can be viewed with <code>sn whois</code>)</td></tr>
+<tr><td><code>sn warn clear &lt;user&gt;</code></td><td>Clear warnings for a user.</td></tr>
+<tr><td><code>sn clear [count]</code></td><td>Clean up the bot's own messages in the channel. Optionally specify a number of messages.</td></tr>
+<tr><td><code>sn purge [count] [user]</code></td><td>Bulk-delete messages from a channel, optionally specify the number of messages and a user to filter to.</td></tr>
+</tbody></table>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../modules/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../modules/administration.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../modules/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../modules/administration.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>

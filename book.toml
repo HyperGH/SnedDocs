@@ -1,0 +1,6 @@
+[book]
+authors = ["HyperGH"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Sned Documentation"
