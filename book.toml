@@ -9,6 +9,7 @@ description = "Documentation for the Discord bot Sned."
 [output.html]
 site-url = "/docs/"
 cname = "sned.hypersden.com"
+git-repository-url = "https://github.com/HyperGH/SnedDocs"
 
 [output.html.print]
 enable = false

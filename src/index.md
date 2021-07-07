@@ -1,6 +1,6 @@
-# Welcome
+# Welcome!
 
-------------
+----------
 
 ## Welcome to the documentation of Sned!
 
