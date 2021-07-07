@@ -4,3 +4,11 @@ language = "en"
 multilingual = false
 src = "src"
 title = "Sned Documentation"
+description = "Documentation for the Discord bot Sned."
+
+[output.html]
+site-url = "/docs/"
+cname = "sned.hypersden.com"
+
+[output.html.print]
+enable = false
