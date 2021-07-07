@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Modules and the Dashboard - Sned Documentation</title>
+        <title>Tags - Sned Documentation</title>
                 
 
         <!-- Custom HTML head -->
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Home</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="../modules/index.html" class="active"><strong aria-hidden="true">1.</strong> Modules and the Dashboard</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../modules/moderation.html"><strong aria-hidden="true">1.1.</strong> Moderation</a></li><li class="chapter-item expanded "><a href="../modules/administration.html"><strong aria-hidden="true">1.2.</strong> Administration</a></li><li class="chapter-item expanded "><a href="../modules/tags.html"><strong aria-hidden="true">1.3.</strong> Tags</a></li><li class="chapter-item expanded "><a href="../modules/reminders.html"><strong aria-hidden="true">1.4.</strong> Reminders</a></li><li class="chapter-item expanded "><a href="../modules/reactionroles.html"><strong aria-hidden="true">1.5.</strong> Reaction Roles</a></li><li class="chapter-item expanded "><a href="../modules/giveaway.html"><strong aria-hidden="true">1.6.</strong> Giveaways</a></li><li class="chapter-item expanded "><a href="../modules/fun.html"><strong aria-hidden="true">1.7.</strong> Fun</a></li><li class="chapter-item expanded "><a href="../modules/misc_commands.html"><strong aria-hidden="true">1.8.</strong> Miscellaneous Commands</a></li></ol></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Home</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="../modules/index.html"><strong aria-hidden="true">1.</strong> Modules and the Dashboard</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../modules/moderation.html"><strong aria-hidden="true">1.1.</strong> Moderation</a></li><li class="chapter-item expanded "><a href="../modules/administration.html"><strong aria-hidden="true">1.2.</strong> Administration</a></li><li class="chapter-item expanded "><a href="../modules/tags.html" class="active"><strong aria-hidden="true">1.3.</strong> Tags</a></li><li class="chapter-item expanded "><a href="../modules/reminders.html"><strong aria-hidden="true">1.4.</strong> Reminders</a></li><li class="chapter-item expanded "><a href="../modules/reactionroles.html"><strong aria-hidden="true">1.5.</strong> Reaction Roles</a></li><li class="chapter-item expanded "><a href="../modules/giveaway.html"><strong aria-hidden="true">1.6.</strong> Giveaways</a></li><li class="chapter-item expanded "><a href="../modules/fun.html"><strong aria-hidden="true">1.7.</strong> Fun</a></li><li class="chapter-item expanded "><a href="../modules/misc_commands.html"><strong aria-hidden="true">1.8.</strong> Miscellaneous Commands</a></li></ol></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -142,20 +142,42 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="modules-and-the-dashboard"><a class="header" href="#modules-and-the-dashboard">Modules and the Dashboard</a></h1>
+                        <h1 id="tags"><a class="header" href="#tags">Tags</a></h1>
 <hr />
-<p>To configure the bot, navigate to the dashboard, which is located <a href="https://sned.hypersden.com/dashboard">here</a>. After logging in with your Discord account, you will see a list of servers where both you, and the bot are members of, and where you have either <code>Administrator</code> or <code>Manage Server</code> permissions. If your serverlist is empty, add the bot to a new server, or ask your server owner for appropriate permissions to manage the bot.</p>
-<p>After clicking on a server, you will be able to see some statistics relating to the server, enable or disable modules, toggle permissions, or change module settings. For a detailed rundown on the options for each module, please see the subchapters.</p>
+<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
+<p>Tags offer users an easy way to save important messages, frequently asked questions, or funny content, then retrieve them later by simply calling the tag by it's name.</p>
+<h4 id="creation"><a class="header" href="#creation">Creation</a></h4>
+<p>To create a tag, type <code>sn tag create &lt;name&gt; &lt;content&gt;</code>. If you wish to add spaces to the name of the tag, please put the name in quotation marks. The maxmimum length for tags is currently <strong>1500</strong> characters. To call your tag, type <code>sn tag &lt;tagname&gt;</code>. This will display the contents of the tag in the current channel. </p>
+<h4 id="management-and-moderation"><a class="header" href="#management-and-moderation">Management and Moderation</a></h4>
+<p>To edit your tag, type <code>sn tag edit &lt;tagname&gt; &lt;new content&gt;</code>. Please note that you can only edit your own tags. If you wish to transfer ownership of your tag, you can type <code>sn tag transfer &lt;tagname&gt; &lt;new owner&gt;</code>. This transfers all ownership and related permissions to the new owner. As a moderator, you can also transfer anyone's tag to any other user, including yourself. Deleting tags is done via the <code>sn tag delete &lt;tagname&gt;</code> if you own the tag, or if you are a moderator. If you would like to know more about a tag, type <code>sn tag info &lt;tagname&gt;</code>. This will display information such as the tag's current owner, aliases, if any.</p>
+<h4 id="discovery"><a class="header" href="#discovery">Discovery</a></h4>
+<p>To find new tags, you can either use <code>sn tag search &lt;name&gt;</code>, which will attempt to find a tag with a given name or alias (aliases are marked with <em>italic</em>.) or list all the tags in the server by using <code>sn tag list</code>, which will spawn a paginated list of all the tags in the server.</p>
+<p>For some advanced features, see the full command list below.</p>
+<h2 id="commands"><a class="header" href="#commands">Commands</a></h2>
+<p>Below you will find all the tag-related commands, and a brief description of each of them. For detailed command usage, you can  type <code>sn help &lt;command_name&gt;</code> in any of the channels where the bot is present.</p>
+<table><thead><tr><th>Command</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>sn tag &lt;tagname or alias&gt;</code></td><td>Calls a tag, displaying it's contents in the current channel.</td></tr>
+<tr><td><code>sn tag claim &lt;tagname or alias&gt;</code></td><td>Claims a tag, transferring it's ownership to the invoker. Can only be used on abandoned tags, when the tag owner left the server.</td></tr>
+<tr><td><code>sn tag create &lt;tagname&gt; &lt;content&gt;</code></td><td>Creates a new tag and binds it's ownership to the invoker.</td></tr>
+<tr><td><code>sn tag edit &lt;tagname or alias&gt; &lt;content&gt;</code></td><td>Edits the specified tag's contents. Requires ownership of the tag.</td></tr>
+<tr><td><code>sn tag alias &lt;tagname&gt; &lt;alias&gt;</code></td><td>Adds an alias to the tag, meaning that the tag can now be called from both names. Requires tag ownership. Cannot overlap with existing tagnames &amp; aliases.</td></tr>
+<tr><td><code>sn tag delalias &lt;tagname&gt; &lt;alias&gt;</code></td><td>Removes an alias from the tag, freeing it up for other tags to use as their name or alias. Requires tag ownership.</td></tr>
+<tr><td><code>sn tag delete &lt;tagname or alias&gt;</code></td><td>Deletes a tag, freeing up the name for other tags or aliases. Requires tag ownership or access to moderation commands.</td></tr>
+<tr><td><code>sn tag transfer &lt;tagname or alias&gt; &lt;new owner&gt;</code></td><td>Transfers a tag's ownership to a different user. Requires tag ownership or access to moderation commands.</td></tr>
+<tr><td><code>sn tag list</code></td><td>Spawns a paginated list of all the tags for this server. Aliases are not listed.</td></tr>
+<tr><td><code>sn tag search &lt;query&gt;</code></td><td>Searches for a given tag or alias. Aliases are formatted with <em>italic</em>.</td></tr>
+<tr><td><code>sn tag info &lt;tagname or alias&gt;</code></td><td>Displays information about the tag, such as the current owner, and a list of aliases associated with the tag.</td></tr>
+</tbody></table>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                                                    <a rel="prev" href="../index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                                    <a rel="prev" href="../modules/administration.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
-                                                    <a rel="next" href="../modules/moderation.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                                    <a rel="next" href="../modules/reminders.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -165,11 +187,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                                    <a rel="prev" href="../index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                    <a rel="prev" href="../modules/administration.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
-                                    <a rel="next" href="../modules/moderation.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                    <a rel="next" href="../modules/reminders.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                             </nav>

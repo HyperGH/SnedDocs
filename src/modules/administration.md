@@ -1,5 +1,7 @@
 # Administration
 
+--- 
+
 ## Commands
 
 Below you will find all the administration commands, and a brief description of each of them. For detailed command usage, you can  type `sn help <command_name>` in any of the channels where the bot is present.
