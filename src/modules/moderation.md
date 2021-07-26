@@ -20,14 +20,31 @@ Sned is equipped with powerful auto-moderation features, which you can access by
 
 You also have the ability to select which roles will be excluded from auto-moderation, although please note that roles with moderation permissions are automatically excluded, along with server administrators and owners.
 
-One of the unique features of Sned is the "Smart" punishment type, which tries preemptively warning the user, before punishing them. The flow looks something like this:
+### Auto-Moderation policies
+
+| Option  | Description  |
+| ------------ | ------------ |
+| **Disabled** | The feature is disabled  |
+| **Notice** | The user is prompted to stop the action, no further measures are taken.   |
+| **Warn** | The user is warned, incrementing their warning counter and logging it. Equivalent to `sn warn` |
+| **Temp-Mute** | The user is temporarily muted, the duration can be customized by clicking the cogwheel next to the dropdown.
+| **Kick** | The user is kicked. |
+| **Soft-Ban** | The user is banned, then immediately unbanned to clean up messages from the past 24 hours. |
+| **Temp-Ban** | The user is temporarily banned, the duration can be customized by clicking the cogwheel next to the dropdown. |
+| **Perma-Ban** | The user is permanently banned. |
+
+
+**Smart** punishment ramps up the measures it brings against the user if the user repeats the offense, it works like this:
 
 1. User posts problematic content
-2. Bot removes it and notifies the user
+2. Bot notifies the user (and removes it, if deletion is enabled)
 3. If the user keeps up the malicious behaviour within a certain timeframe, they will be formally warned, increasing their warning counter.
-4. If the user still keeps going, then the punishment in the "Smart punishment type" option on the Dashboard will be used against the user.
+4. If the user still keeps going, then the punishment in the "Smart punishment type" option on the Dashboard will be used against the user. The duration of the punishment (if applicable) will be inherited from the original offense.
 
----
+#### Advanced settings
+
+Advanced settings for a given option can be accessed by clicking on the **cog-wheel** next to the option. Here one can customize the temporary duration of a punishment, if the offending message should be deleted or not, and some options also provide custom options, like bad-words detection, which lets users customize the list of bad words.
+
 
 ## Commands
 
