@@ -4,7 +4,7 @@
 
  ## Configuration
 
- Permissions should be one of the first things one should configure after adding the bot to a new server. This can be done via the `sn permisson` (or `perm` for a shortened alias) command. This will show you the current configuration of the permissions on the server. Permissions are divided up into **permission-nodes**, and a list of roles can be assigned to any given role. To do this, the command `sn perm add <node> <role>` can be used. It is also a good idea to check the information page of a permission-node via the `sn perm info <node>`, although they are also listed below for convenience. Lastly, to remove a role from a node, the command `sn perm del <node> <role>` can be used.
+ Permissions should be one of the first things one should configure after adding the bot to a new server. This can be done via the `sn permisson` (or `perm` for a shortened alias) command. This will show you the current configuration of the permissions on the server. Permissions are divided up into **permission-nodes**, and a list of roles can be assigned to any given node. To do this, the command `sn perm add <node> <role>` can be used. It is also a good idea to check the information page of a permission-node via the `sn perm info <node>`, although they are also listed below for convenience. Lastly, to remove a role from a node, use `sn perm del <node> <role>`.
 
  ### Permission-nodes
 
