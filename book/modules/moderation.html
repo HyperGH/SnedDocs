@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Home</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="../modules/index.html"><strong aria-hidden="true">1.</strong> Modules and the Dashboard</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../modules/moderation.html" class="active"><strong aria-hidden="true">1.1.</strong> Moderation</a></li><li class="chapter-item expanded "><a href="../modules/administration.html"><strong aria-hidden="true">1.2.</strong> Administration</a></li><li class="chapter-item expanded "><a href="../modules/tags.html"><strong aria-hidden="true">1.3.</strong> Tags</a></li><li class="chapter-item expanded "><a href="../modules/reminders.html"><strong aria-hidden="true">1.4.</strong> Reminders</a></li><li class="chapter-item expanded "><a href="../modules/reactionroles.html"><strong aria-hidden="true">1.5.</strong> Reaction Roles</a></li><li class="chapter-item expanded "><a href="../modules/giveaway.html"><strong aria-hidden="true">1.6.</strong> Giveaways</a></li><li class="chapter-item expanded "><a href="../modules/fun.html"><strong aria-hidden="true">1.7.</strong> Fun</a></li><li class="chapter-item expanded "><a href="../modules/misc_commands.html"><strong aria-hidden="true">1.8.</strong> Miscellaneous Commands</a></li></ol></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Home</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="../modules/index.html"><strong aria-hidden="true">1.</strong> Modules and the Dashboard</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../modules/permissions.html"><strong aria-hidden="true">1.1.</strong> Permissions</a></li><li class="chapter-item expanded "><a href="../modules/administration.html"><strong aria-hidden="true">1.2.</strong> Administration</a></li><li class="chapter-item expanded "><a href="../modules/moderation.html" class="active"><strong aria-hidden="true">1.3.</strong> Moderation</a></li><li class="chapter-item expanded "><a href="../modules/tags.html"><strong aria-hidden="true">1.4.</strong> Tags</a></li><li class="chapter-item expanded "><a href="../modules/reminders.html"><strong aria-hidden="true">1.5.</strong> Reminders</a></li><li class="chapter-item expanded "><a href="../modules/rolebuttons.html"><strong aria-hidden="true">1.6.</strong> Role-Buttons</a></li><li class="chapter-item expanded "><a href="../modules/giveaway.html"><strong aria-hidden="true">1.7.</strong> Giveaways</a></li><li class="chapter-item expanded "><a href="../modules/fun.html"><strong aria-hidden="true">1.8.</strong> Fun</a></li><li class="chapter-item expanded "><a href="../modules/misc_commands.html"><strong aria-hidden="true">1.9.</strong> Miscellaneous Commands</a></li></ol></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -144,7 +144,7 @@
                     <main>
                         <h1 id="moderation"><a class="header" href="#moderation">Moderation</a></h1>
 <hr />
-<h2 id="setup-and-configuration"><a class="header" href="#setup-and-configuration">Setup and Configuration</a></h2>
+<h2 id="setup-and-configuration-dashboard"><a class="header" href="#setup-and-configuration-dashboard">Setup and Configuration (Dashboard)</a></h2>
 <p>To start setting up the moderation module, head to the dashboard, and navigate to <strong>Modules &gt; Moderation</strong>. Here, you can configure:</p>
 <ul>
 <li>Which roles have access to moderation commands (these roles are also exempt from any auto-moderation, if set)</li>
@@ -177,8 +177,10 @@
 </ol>
 <h4 id="advanced-settings"><a class="header" href="#advanced-settings">Advanced settings</a></h4>
 <p>Advanced settings for a given option can be accessed by clicking on the <strong>cog-wheel</strong> next to the option. Here one can customize the temporary duration of a punishment, if the offending message should be deleted or not, and some options also provide custom options, like bad-words detection, which lets users customize the list of bad words.</p>
+<h2 id="permissions"><a class="header" href="#permissions">Permissions</a></h2>
+<p>Permissions in this category are controlled via the <code>moderation</code> permission-node. For more information about permissions, please see <a href="./permissions.html">Permissions</a>.</p>
 <h2 id="commands"><a class="header" href="#commands">Commands</a></h2>
-<p>Below you will find all the moderation commands, and a brief description of each of them. For detailed command usage, you can  type <code>sn help &lt;command_name&gt;</code> in any of the channels where the bot is present.</p>
+<p>Below you will find all the moderation commands, and a brief description of each of them. For detailed command usage, you can type <code>sn help &lt;command_name&gt;</code> in any of the channels where the bot is present.</p>
 <table><thead><tr><th>Command</th><th>Description</th></tr></thead><tbody>
 <tr><td><code>sn kick &lt;user&gt; [reason]</code></td><td>Kicks a user from the server.</td></tr>
 <tr><td><code>sn softban &lt;user&gt; [reason]</code></td><td>Bans a user from the server, then immediately unbans them. Useful for cleaning up messages from a user.</td></tr>
@@ -191,17 +193,18 @@
 <tr><td><code>sn warn clear &lt;user&gt;</code></td><td>Clear warnings for a user.</td></tr>
 <tr><td><code>sn clear [count]</code></td><td>Clean up the bot's own messages in the channel. Optionally specify a number of messages.</td></tr>
 <tr><td><code>sn purge [count] [user]</code></td><td>Bulk-delete messages from a channel, optionally specify the number of messages and a user to filter to.</td></tr>
+<tr><td><code>sn whois &lt;user&gt;</code></td><td>Returns detailed information about the given user, even if they are not in the server.</td></tr>
 </tbody></table>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                                                    <a rel="prev" href="../modules/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                                    <a rel="prev" href="../modules/administration.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
-                                                    <a rel="next" href="../modules/administration.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                                    <a rel="next" href="../modules/tags.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -211,11 +214,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                                    <a rel="prev" href="../modules/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                    <a rel="prev" href="../modules/administration.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
-                                    <a rel="next" href="../modules/administration.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                    <a rel="next" href="../modules/tags.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                             </nav>

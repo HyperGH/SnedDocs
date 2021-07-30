@@ -4,9 +4,13 @@
 
 Fun commands provide for a way to entertain users (or challenge them, in the case of `sn typeracer`). Certain commands are only for use with moderation access.
 
+## Permissions
+
+Permissions in this category are controlled via the `fun` permission-node. `moderation` implicitly inherits this node. For more information about permissions, please see [Permissions](./permissions.md).
+
  ## Commands
 
-Below you will find all the commands in the fun category, and a brief description of each of them. For detailed command usage, you can  type `sn help <command_name>` in any of the channels where the bot is present.
+Below you will find all the commands in the fun category, and a brief description of each of them. For detailed command usage, you can type `sn help <command_name>` in any of the channels where the bot is present.
 
 | Command  | Description  |
 | ------------ | ------------ |

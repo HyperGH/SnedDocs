@@ -4,7 +4,11 @@
 
 ## Usage
 
-Reminders offer users the ability to set and manage... well... reminders! You can create a reminder by typing `sn remindme <when and what>`. For time-formatting refer to the following table:
+Reminders offer users the ability to set and manage... well... reminders! You can create a reminder by typing `sn remindme <when and what>`.
+
+## Time-formatting
+
+#### Relative
 
 | Short  | Long  |
 | ------------ | ------------ |
@@ -16,11 +20,18 @@ Reminders offer users the ability to set and manage... well... reminders! You ca
 | `M`  | `month(s)` |
 | `Y`  | `year(s)` |
 
+#### Absolute
+
+`YYYY-MM-dd hh-mm`
+`YYYY-MM-dd`
+
+*Please note that absolute timezones __must__ be in UTC!*
+
 #### Examples
 
  - `sn remindme in 2 hours to go to sleep`
  - `sn remind 5d example`
- - `sn reminder to mow the lawn in 3 hours`
+ - `sn reminder 2021-04-03 12:35 test`
 
  #### Managing reminders
 
@@ -28,7 +39,7 @@ Reminders offer users the ability to set and manage... well... reminders! You ca
 
 ## Commands
 
-Below you will find all reminder related commands, and a brief description of each of them. For detailed command usage, you can  type `sn help <command_name>` in any of the channels where the bot is present.
+Below you will find all reminder related commands, and a brief description of each of them. For detailed command usage, you can type `sn help <command_name>` in any of the channels where the bot is present.
 
 | Command  | Description  |
 | ------------ | ------------ |

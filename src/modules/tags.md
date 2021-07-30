@@ -20,6 +20,10 @@ To find new tags, you can either use `sn tag search <name>`, which will attempt 
 
 For some advanced features, see the full command list below.
 
+## Permissions
+
+Permissions in this category are controlled via the `tags` permission-node. `moderation` implicitly inherits this node. For more information about permissions, please see [Permissions](./permissions.md).
+
 ## Commands
 
 Below you will find all the tag-related commands, and a brief description of each of them. For detailed command usage, you can  type `sn help <command_name>` in any of the channels where the bot is present.

@@ -2,7 +2,7 @@
 
 ---
 
-## Setup and Configuration
+## Setup and Configuration (Dashboard)
 
 To start setting up the moderation module, head to the dashboard, and navigate to **Modules > Moderation**. Here, you can configure:
 - Which roles have access to moderation commands (these roles are also exempt from any auto-moderation, if set)
@@ -45,10 +45,13 @@ You also have the ability to select which roles will be excluded from auto-moder
 
 Advanced settings for a given option can be accessed by clicking on the **cog-wheel** next to the option. Here one can customize the temporary duration of a punishment, if the offending message should be deleted or not, and some options also provide custom options, like bad-words detection, which lets users customize the list of bad words.
 
+## Permissions
+
+Permissions in this category are controlled via the `moderation` permission-node. For more information about permissions, please see [Permissions](./permissions.md).
 
 ## Commands
 
-Below you will find all the moderation commands, and a brief description of each of them. For detailed command usage, you can  type `sn help <command_name>` in any of the channels where the bot is present.
+Below you will find all the moderation commands, and a brief description of each of them. For detailed command usage, you can type `sn help <command_name>` in any of the channels where the bot is present.
 
 | Command  | Description  |
 | ------------ | ------------ |
@@ -63,3 +66,4 @@ Below you will find all the moderation commands, and a brief description of each
 | `sn warn clear <user>`  | Clear warnings for a user.  |
 | `sn clear [count]`  | Clean up the bot's own messages in the channel. Optionally specify a number of messages.  |
 | `sn purge [count] [user]`  | Bulk-delete messages from a channel, optionally specify the number of messages and a user to filter to.  |
+| `sn whois <user>`  | Returns detailed information about the given user, even if they are not in the server.  |
