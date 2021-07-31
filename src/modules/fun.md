@@ -18,7 +18,7 @@ Below you will find all the commands in the fun category, and a brief descriptio
 | `sn flipcoin`  | Flips a coin.   |
 | `sn funfact`  | Shows a random fun fact. May prove useless.   |
 | `sn google <query>`  | "Googles" a query. Use it on people who refuse to search the web for answers.   |
-| `sn jumbo <custom emoji>`  | Returns a super-sized version of the inputted custom emoji. Does not work on built-in emojies.   |
+| `sn jumbo <custom emoji>`  | Returns a super-sized version of the inputted custom emoji. Does not work on built-in emojies.  |
 | `sn penguinfact`  | Shows a random fact about our icey friends.   |
 | `sn quack`  | Deploys the duck army. For use only by certified professionals. (or moderators)   |
 | `sn randomcat`  | Shows a picture of a random cat.  |
