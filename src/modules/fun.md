@@ -15,8 +15,6 @@ Below you will find all the commands in the fun category, and a brief descriptio
 | Command  | Description  |
 | ------------ | ------------ |
 | `sn boom`  | Explode.   |
-| `sn echo <message>`  | Makes the bot repeat the input while removing the invoking command. Requires access to moderation commands.   |
-| `sn echo to <channel> <message>`  | Makes the bot repeat the input in the given channel while removing the invoking command. Requires access to moderation commands.   |
 | `sn flipcoin`  | Flips a coin.   |
 | `sn funfact`  | Shows a random fun fact. May prove useless.   |
 | `sn google <query>`  | "Googles" a query. Use it on people who refuse to search the web for answers.   |
@@ -27,3 +25,4 @@ Below you will find all the commands in the fun category, and a brief descriptio
 | `sn randomdog`  | Shows a picture of a random dog. Combining this with the previous command may produce unintended sideeffects.  |
 | `sn typeracer [difficulty] [wordcount]`  | Starts a typeracing challenge to see who's the fastest. Difficulty can be `easy`, `normal` or `hard`, wordcount is a max of `20`.  |
 | `sn wiki <query>`  | Searches Wikipedia for results. Shows the 5 most relevant ones.  |
+| `sn avatar [user]`  | Shows the avatar of the given user.   |
