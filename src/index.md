@@ -8,8 +8,6 @@ Welcome to the official documentation for Sned, a versatile and highly configura
 
 Use the links on the left to skip to different chapters in the documentation, or use the searchbar to find what you need!
 
-If you found any issues with either the bot, or the documentation, please let us know INSERT LINK HERE
-
 **Note:** The documentation assumes that you are using the default command-prefix (`sn `), if you changed the prefix, please substitute it in your command syntax. If you forgot your prefix, mention the bot to list all valid prefixes.
 
 ----------
